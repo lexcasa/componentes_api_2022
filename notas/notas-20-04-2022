@@ -51,9 +51,30 @@ Metodos -> Funciones
     EJEMPLO: Crear la funcion suma de dos items
 
     EJERCICIO RAPIDO #1 
-    
+
         - Crear una funcion de resta entre dos numeros
         - Crear una funcion multiplicacion entre dos numeros
         - Crear funcion division
         - Crear la funcion sumatoria de un array
             [1, 2, 3] -> 6
+
+            const sumatoria = function (arr){
+                // Recorrer el array
+                // Sumar c/u de sus elementos
+                // Retornar el resultado de la suma
+            }
+    
+    EJERCICIO RAPIDO #2
+
+        - Modulo reutilizable
+            1. Obtener el apellido de un alumno en funcion del nombre
+
+                Input: alex -> fn -> casadevall
+        
+            2. Obtener la edad del alumno en funcion de su inicial
+
+                Input: a -> fn -> 30
+            
+            3. Obtener la persona en funcion de la inicial
+
+                Input: a -> fn -> { nombre: "alex", apellido: "casadevall", edad: 30 }

@@ -1,5 +1,3 @@
-const suma = function (a, b){
-    return a + b
-}
+const {suma} = require('./calculadora.service')
 
 console.log( suma(1, 2) )
