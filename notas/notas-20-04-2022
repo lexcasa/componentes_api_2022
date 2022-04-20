@@ -1,0 +1,59 @@
+Fundamentos de JavaScript (NodeJS)
+
+    1. Def. de variables y tipos
+    2. Logica
+    3. Iteracion y control de flujo
+    4. Metodos y est. de datos
+
+
+Metodos y est. de datos
+
+
+Metodos -> Funciones
+
+    Tres tipos:
+
+        -> Funciones con retorno
+        -> Funciones procedimiento
+        -> Funciones landa
+
+    Ejemplo: Sumar dos numeros y devolver un resultado
+
+        -> const suma = function (a, b){
+            return a + b
+        }
+
+    Ejemplo: Revisar cual es el valor de la suma
+
+    const logSuma = function (){
+        console.log( suma(a, b) )
+    }
+
+    logSuma()
+
+    Ejemplo: f(x) = x + 1
+
+    const f_x = (x) => x + 1
+
+    const valor = f_x(5) -> 6
+
+    Est. de datos: 
+        -> array: lista de elementos 
+        -> objetos: hashmap
+
+
+    array: [1, 2, 3, "a", "b", {...}]
+    objetos: {
+        nombre: "Alex",
+        edad: 30
+    }
+
+    EJEMPLO: Crear la funcion suma de dos items
+
+    EJERCICIO RAPIDO #1 
+    
+        - Crear una funcion de resta entre dos numeros
+        - Crear una funcion multiplicacion entre dos numeros
+        - Crear funcion division
+        - Crear la funcion sumatoria de un array
+            [1, 2, 3] -> 6
