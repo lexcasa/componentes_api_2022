@@ -1,0 +1,151 @@
+ROADMAP:
+
+    --- 
+        -> API: NodeJS
+            -> ExpressJS
+
+        -> Base de datos: NoSQL -> MongoDB
+            -> mongodb
+
+    --- 
+        POSTMAN
+    
+    -> Front: ReactJS
+
+
+Operaciones CRUD: 
+
+    -> Create
+    -> Read 
+    -> Update
+    -> Delete
+
+Fundamentos de JavaScript (NodeJS)
+
+    1. Def. de variables y tipos
+    2. Logica
+    3. Iteracion y control de flujo
+    4. Metodos y est. de datos
+
+
+
+
+    0. Pre-requisitos: 
+
+        - Instalar NodeJS > 14.x 
+        - Verificar que esta instalado
+            -> Consola ejecutar: node -v
+            -> Consola ejecutar: npm -v (gestor de pkg)
+
+    1. Def. de variables y tipos
+
+        1. Como definimos una variable: let, var, const
+
+        let: block scoped
+        const: es una constante 
+        var: de tipo global
+
+        let nombre = "Alex"
+        const edad = 30
+        var apellido = "Casadevall"
+    
+    Herramienta: console.log(nombre) -> "Alex"
+    console.log(nombre, edad, apellido) -> "Alex", 30, "Casadevall"
+
+
+    Tipos de variables: 
+
+        -> string
+        -> boolean
+        -> int
+        -> float
+        -> array
+        -> obj
+        -> function
+
+    EJERCICIOS RAPIDOS #1
+
+        -> Definir 5 variables de tipos diversos
+        -> Definir 5 constantes de tipos diversos
+        -> Definir 5 global variables de tipos diversos
+
+        Mostrar en la consola con el log
+
+
+    2. Logica -> [true, false]
+
+        -> Comp. aritmeticas
+        -> Comp. logicas
+
+        Comp. aritmeticas: A y B son numericos
+        y los operadores entre A y B  comparan cantidades
+            -> >, <, <=, >=, ==, ===, !=, !==
+
+        Comp. logicos: 
+            -> AND, OR
+
+            AND: Una condicional es verdadera si todos los elementos de la condicional son verdaderos
+            Si existe por lo menos un elemento falso, toda la condicional es falsa
+
+            OR: Una condicional es verdadera si por lo menos un elemento de la condicional es verdadera.
+            Para que la condicional sea falsa todos los elementos de la condicional deben ser falsos
+
+    
+    EJEMPLO #1: 
+        -> Saber si una persona es mayor de edad o no
+
+            -> MAYOR DE EDAD: 18
+            -> Si esa persona es mayor de edad
+
+                -> Si: Igresa
+                -> No: Error
+
+        if( Condicional ){
+            // Exito
+        } else {
+            // Falla
+        }
+
+    EJEMPLO #2: 
+
+        -> Una persona para viajar al exterior (dentro de LATAM)
+
+            -> Mayor de edad
+            -> Tener documento
+
+            -> Si cumple con las dos condiciones anteriores: puede viajar
+            -> Caso contrario: No puede viajar
+
+    EJERCICIO RAPIDOS #2
+
+        -> Un niño puede viajar dentro de LATAM 
+
+            -> Los padres sean mayor de edad (por lo menos uno de ellos)
+            -> Tener autorizacion de uno de los padres
+            -> Tener documento
+        
+        -> Si cumple todos las condiciones puede viajar
+        -> Caso contrario no puede viajar
+
+    3. Iteracion y control de flujo
+
+        -> Iteracion: Recorrer una estructura de datos
+                -> Array 
+                -> Objeto
+        
+        EJEMPLO #3: Quiero clasificar un array y separar numeros de strings
+
+            -> const arr = [1, 2, 3, "hola", "b", 5]
+
+                -> arr01 = [1, 2, 3, 5]
+                -> arr02 = ["hola", "b"]
+
+        Sintaxis: 
+
+            for (let i = 0; i < arr.length; i++){
+
+            }
+        
+        Clasificar un elemento: 
+            -> typeof num === 'string' -> Resultado: [true, false]
+            -> typeof num === 'number' -> Resultado: [true, false]
