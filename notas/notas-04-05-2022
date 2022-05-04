@@ -1,0 +1,93 @@
+ROADMAP: 
+
+    -> Crear una API en Express que siga las Operaciones CRUD
+
+    -> Crud:
+        -> Create
+        -> Read
+        -> Update
+        -> Delete
+
+    -> Sin conectar a una base de datos
+    -> Todo en memoria
+
+    API REST
+        -> Orientado a estados
+            -> Estado: 
+                (URL, Metodo)
+
+            EJEMPLO: Listar todos los usuarios de un sistema (API)
+
+            Obtener los datos de URL -> /usuarios
+            Para obtener los datos tengo utilizar un metodo (HTTP)
+
+            HTTP Verbose
+                -> GET      : Read
+                -> POST     : Create
+                -> PUT      : Update
+                -> DELETE   : Delete
+            
+            Estado: (URL, Metodo)
+                (/usuarios, GET)
+                    -> Datos: std. JSON
+
+            [Base de datos] <----> [ API: NodeJS ] <-- Proto: HTTP (JSON) --> [Web App (JS, Swift, Java ... )]
+
+        PASOS NECESARIOS: 
+
+            1. Setup
+            2. API Minima
+                -> Desplegar a traves de un GET : "Hola Mundo"
+
+            0. Herramienta de desarrollo
+                -> npm i -g nodemon
+                -> Si hay un problema de seguridad con windows (stackoverflow)
+
+            1. SETUP: 
+                SETUP DE 0: 
+                    -> Crear la carpeta del backend
+                    -> Dentro de la carpeta
+                        -> npm init
+                            -> Va a crear un archivo: package.json
+                            -> package.json: va almacenar todas las dependencias que necesita mi backend
+                        -> Enter hasta responder todas las preguntas
+                    -> Crear un archivo: .gitignore
+                        -> Le agregamos las siguientes lineas:
+
+                            node_modules
+                            package-lock.json
+
+                    -> Correr: 
+                        -> npm i --save express body-parser cors mongodb
+
+                    -> Setup del codigo para la API minima
+                    -> Crear el archivo app.js
+
+                SETUP YA EXISTE: 
+
+                    -> Dentro de la carpeta del backend
+                    -> npm i
+                        -> Va a instalar todas las dependencias que tiene el package.json
+            
+            2. API Minima
+                -> Requerimos el express dentro del app.js
+                -> Hacemos el setup del webserver: app.listen
+                -> Creamos el estado (URL, Metodo)
+                    -> URL: /
+                    -> Estado: GET
+                -> Estado va a devolver un obj JSON
+                    -> {
+                        mensaje: "Hola Mundo!"
+                    }
+                -> Corremos la API: 
+                    nodemon app.js
+
+    EJERCICIO RAPIDO #1: Dado una URL le paso el nombre y me devuelve: 
+        -> Hola, +Nombre
+
+        EJEMPLO: 
+
+            -> URL: /saludo/:nombre
+            -> {
+                saludo: "Hola, alex"
+            }
