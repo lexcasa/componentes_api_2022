@@ -112,6 +112,7 @@ ROADMAP:
         #b: Desplegar la edad y el apellido en funcion del nombre que encuentr
         -> /persona/:nombre
         -> {
+            nombre: "Juan",
             apellido: "Casadevall",
             edad: 30
         }
