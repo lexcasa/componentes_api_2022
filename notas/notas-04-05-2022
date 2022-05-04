@@ -91,3 +91,53 @@ ROADMAP:
             -> {
                 saludo: "Hola, alex"
             }
+
+    EJERCICIO RAPIDO #2: 
+        
+        #a: Desplegar un listado de personas
+        -> /personas
+        -> [
+            {
+                nombre: "Alex",
+                apellido: "Casadevall",
+                edad: 30
+            },
+            {
+                nombre: "Juan",
+                apellido: "Casadevall",
+                edad: 18
+            }
+        ]
+
+        #b: Desplegar la edad y el apellido en funcion del nombre que encuentr
+        -> /persona/:nombre
+        -> {
+            apellido: "Casadevall",
+            edad: 30
+        }
+
+        #c: Obtener personas por rango de edad
+        -> /personas/edades/:inicio/:fin 
+        -> Ejemplo: /personas/edades/0/18
+            [
+                {
+                    nombre: "Juan",
+                    apellido: "Casadevall",
+                    edad: 18
+                }
+            ]
+        
+        -> Ejemplo: /personas/edades/17/31
+            [
+                {
+                    nombre: "Alex",
+                    apellido: "Casadevall",
+                    edad: 30
+                },
+                {
+                    nombre: "Juan",
+                    apellido: "Casadevall",
+                    edad: 18
+                }
+            ]
+    
