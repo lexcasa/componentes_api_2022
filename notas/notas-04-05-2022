@@ -142,3 +142,13 @@ ROADMAP:
                 }
             ]
     
+   PROX. CLASE: 
+
+        -> MongoDB
+        -> POST
+        -> PUT
+        -> DELETE
+    
+    APP DE REACT
+        -> Integrar API
+        -> APP SPA
