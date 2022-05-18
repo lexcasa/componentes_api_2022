@@ -1,0 +1,103 @@
+Base de datos NoSQL
+
+    -> Modelo
+    -> MongoDB (Operaciones CRUD)
+    -> Muchos ejercicios
+
+
+
+Modelo: 
+
+    -> Abs de la realidad en un Obj que podamos almacenar
+
+    REALIDAD #1:
+
+    Producto
+        -> Producto de una tienda
+            -> Tienda de zapatos
+
+        -> Modelo: 
+            Producto: {
+                nombre: String,
+                marca: String,
+                talle: String
+            }
+
+    Modelo (Collection) -> Almacenamos en un documento
+
+    REALIDAD #2
+
+    Producto
+        -> Producto de una tienda
+            -> Tienda Mini-mercado
+    
+    Categoria
+        -> Categorias de una tienda
+            -> Tienda Mini-mercado
+
+        -> Modelo 1: 
+            Producto: {
+                nombre: String, 
+                precio: Float,
+                cateogoria: Objeto
+            }
+        
+        -> Modelo 2:
+            Categoria: {
+                nombre: String,
+                tipo: String
+            }
+    
+
+
+    ---> NO IDEAL
+
+        Modelo Min 1: 
+            Producto: {
+                nombre: String
+            }
+
+        Modelo Min 2:
+            Categoria: {
+                nombre: String
+            }
+    
+    Obs: No deberia pasar: Modelo 1 = Modelo 2 en mi base de datos
+    
+
+    REALIDAD #3: Tienda donde puede comprar un producto un cliente final o empresa
+
+    Modelaodo #1
+
+        Modelo Min Cliente final: 
+         Cliente: {
+             nombre,
+             documento,
+             email
+         }
+
+         Modelo Min Cliente empresa: 
+         ClienteEmpresa: {
+             nombre,
+             rut,
+             email
+         }
+
+    Modelado tipado #2: 
+
+        Modelo Min Cliente: 
+         Cliente: {
+             nombre,
+             documento,
+             email,
+             tipo: ['final','empresa']
+         }
+
+    EJERCICIO RAPIDO #1: Tengo una tienda de componentes de PC y el objetivo es hacer el control de stock
+    de los componentes. Definir la base de datos minima con sus modelos para resolver el problema.
+
+    Componentes: Cooler, Mother board, Monitor, Mouse, Teclado
+    Saber: Entrada - Salida de los componentes de la tienda
+
+    -> Identificar los modelos minimos
+    -> Ejemplos
