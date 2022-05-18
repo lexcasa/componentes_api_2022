@@ -101,3 +101,64 @@ Modelo:
 
     -> Identificar los modelos minimos
     -> Ejemplos
+
+
+    -> Modelos Minimos: 
+        -> Stock (entrada/salida)
+        -> Componentes
+        
+        Modelo Min - Componentes: {
+            nombre: String, 
+            marca: String,
+            cod: String
+        }
+
+        Modelo Min - Stock: {
+            Componente: Objeto, 
+            Cantidad: Float
+        }
+
+        Ejemplo de coleccion: Componentes: 
+
+        [
+            {
+                nombre: "Cooler",
+                marca: "XYZ",
+                cod: "ABC123"
+            },
+            {
+                nombre: "Motherboard",
+                marca: "Gigabyte",
+                cod: "GBYT123"
+            }
+        ]
+
+        Stock: 
+
+        [
+            {
+                componente: {
+                    nombre: "Cooler",
+                    marca: "XYZ",
+                    cod: "ABC123"
+                },
+                cantidad: 10
+            },
+            {
+                componente: {
+                    nombre: "Cooler",
+                    marca: "XYZ",
+                    cod: "ABC123"
+                },
+                cantidad: -5
+            }
+        ]
+
+        Total de "Cooler" -> 5
+
+        EJERCICIO RAPIDO #2: Se desea construir una app para la asistencia de los alunmnos
+        en una clases. Las clases componen a un curso que esta categorizado por: Tecnologia,
+        Finanzas, Recursos humanos. Cada clase tiene sus topicos que se van a dictar.
+
+        -> Identificar los modelos min.
+        -> Generar un ejemplo
