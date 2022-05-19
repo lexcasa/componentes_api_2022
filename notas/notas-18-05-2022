@@ -162,3 +162,139 @@ Modelo:
 
         -> Identificar los modelos min.
         -> Generar un ejemplo
+
+        Modelo Min - Cursos: {
+            nombre: String,
+            categoria: ['Tecnologia', 'Finanzas', 'Recursos Humanos'],
+            clases: Array de Obj
+        }
+
+        Modelo Min - Clases: {
+            topicos: Array de Obj,
+            alumnos: Array de Obj
+        }
+
+        Modelo Min - Alumnos: {
+            nombre: String, 
+            apellido: String,
+            email: String
+        }
+
+        Ejemplo: 
+
+        Alumnos: [
+            {
+                nombre: "Alex",
+                apellido: "Casadevall",
+                email: "lexcasa@gmail.com"
+            },
+            {
+                nombre: "Juan",
+                apellido: "Casadevall",
+                email: "juan@gmail.com"
+            }
+        ]
+
+        Cursos: [
+            {
+                nombre: "Programacion JavaScript",
+                categoria: 'Tecnologia',
+                clases: [
+                    {
+                        topicos: [{...}, ...],
+                        alumnos: [{...}, ...]
+                    },
+                    {
+                        topicos: [{...}, ...],
+                        alumnos: [{...}, ...]
+                    },
+                    {
+                        topicos: [{...}, ...],
+                        alumnos: [{...}, ...]
+                    }
+                ]
+            }
+        ]
+
+        Clases: [
+            {
+                topicos: [
+                    {nombre: "P. Programacion"},
+                    {nombre: "Logica. Programacion"}
+                ],
+                alumnos: [
+                    {
+                        nombre: "Alex",
+                        apellido: "Casadevall",
+                        email: "lexcasa@gmail.com"
+                    }
+                ]
+            },
+            {
+                topicos: [
+                    {nombre: "Iteraciones y control de flujo"},
+                    {nombre: "Funciones"}
+                ],
+                alumnos: [
+                    {
+                        nombre: "Alex",
+                        apellido: "Casadevall",
+                        email: "lexcasa@gmail.com"
+                    },
+                    {
+                        nombre: "Juan",
+                        apellido: "Casadevall",
+                        email: "juan@gmail.com"
+                    }
+                ]
+            }
+        ]
+
+    Mongo DB
+        -> Crud: Create, Read, Update, Delete
+
+        Modelo: Componentes: {
+            nombre: String, 
+            marca: String,
+            cod: String
+        }
+
+        Base de datos: Tienda_PC
+            -> Collection: componentes
+                -> Create: Insertar un componente (documento JSON) en la base de datos: 
+                    
+                    {
+                        "nombre": "Cooler",
+                        "marca": "Cooler master",
+                        "cod": "ABC123"
+                    }
+
+                db.getCollection('componentes').insertOne({
+                        "nombre": "Cooler",
+                        "marca": "Cooler master",
+                        "cod": "ABC123"
+                })
+
+            -> Quiero ver lo que inserte o los documentos que tengo para el collection
+                -> Read:  db.getCollection('componentes').find({}) -> Todos los elementos de mi coleccion
+                -> Dentro del .find() puedo definir un objeto filtro
+                -> Podemos filtrar las columnas que quiero mostrar en el read
+                    -> .find({}, {col1: 1, col2: 1, ... colN: 1})
+
+            
+            -> Quiero actualizar un componente solo el nombre
+
+                    db.getCollection('componentes').updateOne(
+                        {
+                                "cod": "ABC123"
+                        }, { 
+                            $set: {
+                                "nombre": "Cooler Edited"
+                            }
+                        })
+
+            -> Quiero eliminar un documento
+
+                 db.getCollection('componentes').deleteOne({
+                     "cod": "ABC123"
+                 })
