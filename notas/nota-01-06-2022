@@ -22,3 +22,9 @@ Base: tienda_pc
             -> Actualizar el componente por _id
         -> DELETE /componente/:id
             -> Eliminar el componente por _id
+
+    EJERCICIO RAPIDO #1: 
+    
+        -> API para obtener un componente por ID
+        -> API para obtener un componente por codigo
+        -> API de crear componente que autogenere el codigo con algun algoritmo
