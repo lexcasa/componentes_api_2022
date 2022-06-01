@@ -1,0 +1,24 @@
+Roadmap:
+
+    -> MongoDB ya integrado con NodeJS
+    -> Setup de una app de ReactJS
+    -> Integracion del Crud en RactJS con la API en NodeJS
+
+Modelo: 
+Componentes: {
+        nombre: String, 
+        marca: String,
+        cod: String
+    }
+
+Base: tienda_pc
+
+    -> Crud: 
+        -> GET /componentes 
+            -> todos los componentes que tengo en la coleccion
+        -> POST /componentes
+            -> Crear un componente nuevo
+        -> PUT /componente/:id
+            -> Actualizar el componente por _id
+        -> DELETE /componente/:id
+            -> Eliminar el componente por _id
