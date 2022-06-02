@@ -1,126 +1,73 @@
 {
-	"id": "654ed385-809f-ad6e-eb5c-ff47e9733933",
-	"name": "Tienda PC",
-	"description": "",
-	"order": [
-		"d490953c-17d3-da0e-a374-ce69d21f8f39",
-		"fa7999a0-bf75-7522-9e06-9a7edc377215",
-		"d7d85634-0d9a-20c3-45e5-ffe3e7aef48f",
-		"29d2d189-7680-ab1a-1776-d7a36ed4524e"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1654124138832,
-	"owner": 0,
-	"public": false,
-	"requests": [
+	"variables": [],
+	"info": {
+		"name": "Tienda PC",
+		"_postman_id": "654ed385-809f-ad6e-eb5c-ff47e9733933",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "29d2d189-7680-ab1a-1776-d7a36ed4524e",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:3000/componentes",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "PUT",
-			"collectionId": "654ed385-809f-ad6e-eb5c-ff47e9733933",
-			"data": [],
-			"dataMode": "raw",
-			"name": "Actualizar componente por ID",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1654125333030,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n    \"_id\": \"6297f0f180d6502f9084d247\",\n    \"nombre\": \"Mouse\",\n    \"marca\": \"CoolerMaster\",\n    \"cod\": \"acc111\"\n}"
-		},
-		{
-			"id": "d490953c-17d3-da0e-a374-ce69d21f8f39",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:3000/componentes",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "654ed385-809f-ad6e-eb5c-ff47e9733933",
-			"data": null,
-			"dataMode": "params",
 			"name": "Obtener todos los componentes",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1654124192826,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"request": {
+				"url": "http://localhost:3000/componentes",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		},
 		{
-			"id": "d7d85634-0d9a-20c3-45e5-ffe3e7aef48f",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:3000/componentes/628590f97281b4ed70cf840d",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "DELETE",
-			"collectionId": "654ed385-809f-ad6e-eb5c-ff47e9733933",
-			"data": null,
-			"dataMode": "params",
-			"name": "Eliminar componente por ID",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1654125130041,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "fa7999a0-bf75-7522-9e06-9a7edc377215",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:3000/componentes",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "654ed385-809f-ad6e-eb5c-ff47e9733933",
-			"data": [],
-			"dataMode": "raw",
 			"name": "Agregar componente nuevo",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1654124835732,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n    \"nombre\": \"Silla\",\n    \"marca\": \"CoolerMaster\",\n    \"cod\": \"acc111\"\n}"
+			"request": {
+				"url": "http://localhost:3000/componentes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Silla\",\n    \"marca\": \"CoolerMaster\",\n    \"cod\": \"acc111\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar componente por ID",
+			"request": {
+				"url": "http://localhost:3000/componentes/628590f97281b4ed70cf840d",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar componente por ID",
+			"request": {
+				"url": "http://localhost:3000/componentes",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"6297f0f180d6502f9084d247\",\n    \"nombre\": \"Mouse\",\n    \"marca\": \"CoolerMaster\",\n    \"cod\": \"acc111\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
