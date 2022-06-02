@@ -24,7 +24,105 @@ Base: tienda_pc
             -> Eliminar el componente por _id
 
     EJERCICIO RAPIDO #1: 
-    
+
         -> API para obtener un componente por ID
         -> API para obtener un componente por codigo
         -> API de crear componente que autogenere el codigo con algun algoritmo
+    
+    EJERCICIO RAPIDO #2: 
+
+        -> Crear un CRUD de usuarios en la base de datos tienda_pc
+
+            Modelo: Usuario {
+                nombre: String,
+                email: String,
+                tipo: String
+            }
+
+            API: 
+                -> GET /usuarios
+                    -> Response va a ser una lista de usuarios
+                -> POST /usuarios
+                    -> Request: {
+                        nombre,
+                        email,
+                        tipo
+                    }
+                -> PUT /usuarios
+                    -> Request: {
+                        _id,
+                        nombre,
+                        email,
+                        tipo
+                    }
+                -> DELETE /usuarios/:id
+                -> GET /usuarios/:id
+                    -> Obtener usuario por ID
+                -> GET /usuarios/tipo/:tipo
+                    -> Obtener usuarios por tipos
+                        -> admin, cliente
+
+    EJERCICIO RAPIDO #3
+
+        -> Crear un crud de Stock
+
+            Modelo - Stock {
+                componente: {
+                    nombre: String, 
+                    marca: String,
+                    cod: String
+                },
+                cantidad: Float
+            }
+
+            API 
+                -> GET /stock
+                    -> traemos todos los items de stock
+                    -> cantidad total de elementos
+                    {
+                        items: [...],
+                        total: 123
+                    }
+                -> POST /stock
+                    -> Agregar un item al stock
+                    
+                    {
+                        componente: {
+                            nombre: String, 
+                            marca: String,
+                            cod: String
+                        },
+                        cantidad: Float
+                    }
+                
+                -> GET /stock/cantidad
+
+                    {
+                        total: 123
+                    }
+
+    EJERCICIO RAPIDO #4
+
+        -> Crud de categorias
+
+            Modelo - Categoria {
+                nombre,
+                cod
+            }
+
+            API
+                -> GET /categorias
+                    -> Listado de categorias
+                
+                -> POST /categorias
+                    -> Creamos una categoria nueva:
+                        
+                        Categoria {
+                            nombre,
+                            cod
+                        }
+
+                -> PUT /categorias
+                -> DELETE /categorias
+
+
