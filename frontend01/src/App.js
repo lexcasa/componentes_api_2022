@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import MuestraNombre from './componentes/muestraNombre';
 import Row from './componentes/row.component';
+import Form from './componentes/form.component';
 import axios from 'axios'
 
 const API   = 'http://localhost:3001/'
@@ -36,11 +36,10 @@ function App() {
     setForm(item)
   }
 
-  const eliminarItem = function (id){
-    axios.delete(API + model + '/' + id).then( res => {
-      console.log("res ::", res)
-      obtenerItems()
-    })
+  const eliminarItem = async function (id){
+    const res = await axios.delete(API + model + '/' + id)
+    console.log("res ::", res)
+    obtenerItems()
   }
 
   const handleGuardar = function (e){
@@ -104,40 +103,7 @@ function App() {
           }
         </tbody>
       </table>
-      <form>
-        <input 
-            type="text"
-            placeholder="Id"
-            value={form._id}
-            readOnly={true}
-            disabled
-          />
-          <br />
-          <input 
-            type="text"
-            placeholder="Nombre"
-            value={form.nombre}
-            onChange={(e) => setForm({...form, nombre: e.target.value})}
-          />
-          <br/>
-          <input 
-            type="text"
-            placeholder="Marca"
-            value={form.marca}
-            onChange={(e) => setForm({...form, marca: e.target.value})}
-          />
-          <br/>
-          <input 
-            type="text"
-            placeholder="Cod"
-            value={form.cod}
-            onChange={(e) => setForm({...form, cod: e.target.value})}
-          />
-          <br/>
-          <button
-          onClick={handleGuardar}
-          >Guardar</button>
-        </form>
+      <Form form={form} setForm={setForm} handleGuardar={handleGuardar} />
     </div>
   );
 }

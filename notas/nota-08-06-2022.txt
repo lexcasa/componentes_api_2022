@@ -18,10 +18,57 @@ FrontEnd
     Crear Crud:
         -> EJEMPLO: Crear una tabla que obtenga los datos de la lista de Componentes
             1. Crear la tabla en react [x]
-            2. Como nos conectamos a la API
+            2. Como nos conectamos a la API [x]
             3. Como listamos las filas de forma dinamica
         
         2. Necesitamos un HTTP Client
             -> lib axios
             -> instalamos con: npm i --save axios
             -> importar axios en nuestro App.js
+            -> 
+                axios.get(url)
+                    .then(callback)
+                    .catch(callback)
+                
+                axios.post(url, obj)
+                    .then(callback)
+                    .catch(callback)
+
+                axios.put(url, obj)
+                    .then(callback)
+                    .catch(callback)
+
+                axios.delete(url)
+                    .then(callback)
+                    .catch(callback)
+
+                // Caso asincrono
+                async function (){
+                    await axios.get(url)
+                }
+        
+        3. Listar el array de componentes dinamicamente
+            3.1 Se obtiene la informacion del GET con axios
+            3.2 Se define el estado arrComps con un useState([])
+            3.3 Creamos un componente Row
+                -> El componente Row va a recibir los items
+                -> Funciones editar y eliminar
+            3.4 dentro de arrComps.map 
+                -> Se agrega el Row para hacer loop
+
+        4. Obtener un item de la row y cargar el formulario
+            4.1 Definiamos un estado objeto con las propiedades del componente
+                -> const [form, setForm] = useState({_id, nombre, ...})
+            4.2 Al pasar la funcion editarItem
+                -> setForm(item) dentro del componente Row
+            4.3 Aca cargaba los datos en el formulario
+            4.4 El formulario no se puede editar hasta que definamos la prop
+                en el input
+                    onChange={ (e) => setForm({...form, marca: e.target.value}) }
+        
+        5. El evento submit para guardar el obj del formulario
+            5.1 Definimos una funcion handler para enviar el obj
+                -> dependiendo del contenido del _id 
+                    -> Seria editar si la _id contiene data
+                    -> Crear si la _id es vacia
+            5.2 luego enviar a la API se recarga los datos del formulario
