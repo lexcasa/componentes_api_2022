@@ -1,0 +1,27 @@
+const Componentes = require("../backend01/services/componentes.service")
+
+FrontEnd
+    -> Op. Crud
+        -> ReactJS
+            -> npx create-react-app frontend01 (crear app en reactjs)
+                -> node_modules
+                -> public
+                -> src
+                -> package.json
+        -> Carpeta de trabajo
+            -> src/
+                -> App.js
+                -> index.js
+        -> Correr app de React
+            -> npm start
+        
+    Crear Crud:
+        -> EJEMPLO: Crear una tabla que obtenga los datos de la lista de Componentes
+            1. Crear la tabla en react [x]
+            2. Como nos conectamos a la API
+            3. Como listamos las filas de forma dinamica
+        
+        2. Necesitamos un HTTP Client
+            -> lib axios
+            -> instalamos con: npm i --save axios
+            -> importar axios en nuestro App.js
